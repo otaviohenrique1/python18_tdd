@@ -1,7 +1,7 @@
 from datetime import date
 
 class Funcionario:
-    def __init__(self, nome, data_nascimento, salario):
+    def __init__(self, nome: str, data_nascimento: str, salario: float):
         self._nome = nome
         self._data_nascimento = data_nascimento
         self._salario = salario
@@ -19,6 +19,11 @@ class Funcionario:
         ano_nascimento = data_nascimento_quebrada[-1]
         ano_atual = date.today().year
         return ano_atual - int(ano_nascimento)
+    
+    def sobrenome(self):
+        nome_completo = self._nome.strip()
+        nome_quebrado = nome_completo.split(" ")
+        return nome_quebrado[-1]
 
     def calcular_bonus(self):
         valor = self._salario * 0.1
