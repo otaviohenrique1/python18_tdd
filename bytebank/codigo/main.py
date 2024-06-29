@@ -17,5 +17,5 @@ from bytebank import Funcionario
 
 # test_idade()
 
-ana = Funcionario('Ana', '12/03/1997', 1000)
+ana = Funcionario('Ana', '12/03/1997', 100000000000)
 print(ana.calcular_bonus())
