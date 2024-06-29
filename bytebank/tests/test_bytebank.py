@@ -17,8 +17,24 @@ class TestClass:
         assert resultado == esperado  # Then-Desfecho
 
     def test_quando_sobrenome_recebe_Lucas_Carvalho_deve_retornar_Carvalho(self):
-        entrada = ' Lucas Carvalho ' # Given
-        esperado = 'Carvalho'
+        entrada = " Lucas Carvalho "  # Given
+        esperado = "Carvalho"
         lucas = Funcionario(entrada, "11/11/2000", 1111)
-        resultado = lucas.sobrenome() # When
+        resultado = lucas.sobrenome()  # When
+        assert resultado == esperado
+
+    def test_quando_decrescimo_salario_recebe_100000_deve_retornar_90000(self):
+        entrada_salario = 100000  # given
+        entrada_nome = "Paulo Bragança"
+        esperado = 90000
+        funcionario_teste = Funcionario(entrada_nome, "11/11/2000", entrada_salario)
+        funcionario_teste.decrecimo_salario()  # when
+        resultado = funcionario_teste.salario
+        assert resultado == esperado
+
+    def test_quando_calcular_bonus_recebe_1000_deve_retornar_100(self):
+        entrada = 1000  # given
+        esperado = 100
+        funcionario_teste = Funcionario("teste", "11/11/2000", entrada)
+        resultado = funcionario_teste.calcular_bonus() #when
         assert resultado == esperado
