@@ -43,5 +43,13 @@ Projeto do curso "Python e TDD: explorando testes unitários" da Alura
 1. python -m virtualenv .venv
 2. source .venv/scripts/activate
 3. pip install -r requirements.txt
-4. pytest -v
-5. pytest -v -m calcular_bonus
+
+### Comandos para testar o projeto
+
+1. pytest -v
+2. pytest -v -m calcular_bonus
+3. pytest --cov=codigo tests/
+4. pytest --cov=codigo tests/ --cov-report term-missing
+5. pytest --cov=codigo tests/ --cov-report html
+6. pytest --junitxml report.xml
+7. pytest --cov-report xml
