@@ -26,6 +26,8 @@ Projeto do curso "Python e TDD: explorando testes unitários" da Alura
 ### Pacotes
 
 - pip install virtualenv
+- pip install pytest
+- pip install pytest-cov
 
 ## Exibir pacotes instalados
 
@@ -42,3 +44,4 @@ Projeto do curso "Python e TDD: explorando testes unitários" da Alura
 2. source .venv/scripts/activate
 3. pip install -r requirements.txt
 4. pytest -v
+5. pytest -v -m calcular_bonus
